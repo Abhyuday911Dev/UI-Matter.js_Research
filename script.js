@@ -31,6 +31,7 @@
 // });
 
 
+
 // below stuff tapa hua mal hai, i did not make it
 
 var SCREEN_WIDTH = window.innerWidth;
@@ -144,7 +145,7 @@ function loop() {
 
   RADIUS_SCALE = Math.min(RADIUS_SCALE, RADIUS_SCALE_MAX);
 
-  context.fillStyle = 'rgba(0,0,0,0.05)';
+  context.fillStyle = 'rgba(0,0,0,0.15)';
   context.fillRect(0, 0, context.canvas.width, context.canvas.height);
 
   for (i = 0, len = particles.length; i < len; i++) {
@@ -153,8 +154,8 @@ function loop() {
     var lp = { x: particle.position.x, y: particle.position.y };
 
     // Rotation
-    particle.offset.x += particle.speed;
-    particle.offset.y += particle.speed;
+    particle.offset.x += particle.speed * 1;
+    particle.offset.y += particle.speed * 1;
 
     // Follow mouse with some lag
     particle.shift.x += (mouseX - particle.shift.x) * (particle.speed);
